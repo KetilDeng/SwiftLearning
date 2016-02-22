@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FMDB_Manager.xcodeproj">
+      location = "self:Swift_2.1(String).xcodeproj">
    </FileRef>
 </Workspace>
