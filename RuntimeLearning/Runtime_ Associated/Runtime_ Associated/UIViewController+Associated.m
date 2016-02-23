@@ -24,13 +24,23 @@
     objc_setAssociatedObject(self, @selector(associatedObject_copy), associatedObject_copy, OBJC_ASSOCIATION_COPY);
 }
 
-//- (void)setAssociatedObject_bool:(BOOL)associatedObject_bool{
-//    objc_setAssociatedObject(self, @selector(associatedObject_bool), associatedObject_bool, OBJC_ASSOCIATION_ASSIGN);
-//}
+- (void)setAssociatedObject_bool:(BOOL)associatedObject_bool{
+    objc_setAssociatedObject(self, @selector(associatedObject_bool), @(associatedObject_bool), OBJC_ASSOCIATION_ASSIGN);
+}
 
-//- (BOOL)associatedObject_bool{
-//    return objc_getAssociatedObject(self, _cmd);
-//}
+#if 0
+- (void)setAssociatedObject_integer:(NSInteger)associatedObject_integer{
+    objc_setAssociatedObject(self, @selector(associatedObject_integer), @(associatedObject_integer), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSInteger)associatedObject_integer{
+    return objc_getAssociatedObject(self, _cmd);
+}
+#endif
+
+- (BOOL)associatedObject_bool{
+    return objc_getAssociatedObject(self, _cmd);
+}
 
 - (NSString *)associatedObject_assign{
     return objc_getAssociatedObject(self, _cmd);

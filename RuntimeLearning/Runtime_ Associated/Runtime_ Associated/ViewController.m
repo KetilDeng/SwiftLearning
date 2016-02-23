@@ -26,7 +26,9 @@ __weak NSString *string_weak_copy   = nil;
     self.associatedObject_assign = [NSString stringWithFormat:@"dengketao1"];
     self.associatedObject_retain = [NSString stringWithFormat:@"dengketao2"];
     self.associatedObject_copy   = [NSString stringWithFormat:@"dengketao3"];
-//    self.associatedObject_bool = NO;
+    self.associatedObject_bool = NO;
+
+//    self.associatedObject_integer = 7;
 
     string_weak_assign = self.associatedObject_assign;
     string_weak_retain = self.associatedObject_retain;
@@ -37,7 +39,9 @@ __weak NSString *string_weak_copy   = nil;
     NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign); 
     NSLog(@"self.associatedObject_retain: %@", self.associatedObject_retain);
     NSLog(@"self.associatedObject_copy:%@", self.associatedObject_copy);
-//    NSLog(@"associatedObject_bool:%d", self.associatedObject_bool);
+#warning --- 无效 associatedObject_bool ？？？
+    NSLog(@"associatedObject_bool:%d", self.associatedObject_bool);
+//    NSLog(@"associatedObject_integer:%d",self.associatedObject_integer);
 }
 
 - (void)didReceiveMemoryWarning {

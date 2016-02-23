@@ -13,8 +13,7 @@
 @property (assign, nonatomic) NSString *associatedObject_assign;
 @property (strong, nonatomic) NSString *associatedObject_retain;
 @property (copy,   nonatomic) NSString *associatedObject_copy;
-
-#warning --- 非id的基础数据类型如何setter ？
-//@property (nonatomic, assign) BOOL associatedObject_bool;
+@property (nonatomic, assign) BOOL associatedObject_bool;
+@property (nonatomic, assign) NSInteger associatedObject_integer;
 
 @end
