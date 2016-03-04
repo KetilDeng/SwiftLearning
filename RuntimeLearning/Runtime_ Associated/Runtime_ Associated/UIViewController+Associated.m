@@ -28,18 +28,16 @@
     objc_setAssociatedObject(self, @selector(associatedObject_bool), @(associatedObject_bool), OBJC_ASSOCIATION_ASSIGN);
 }
 
-#if 0
 - (void)setAssociatedObject_integer:(NSInteger)associatedObject_integer{
     objc_setAssociatedObject(self, @selector(associatedObject_integer), @(associatedObject_integer), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (NSInteger)associatedObject_integer{
-    return objc_getAssociatedObject(self, _cmd);
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
-#endif
 
 - (BOOL)associatedObject_bool{
-    return objc_getAssociatedObject(self, _cmd);
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 - (NSString *)associatedObject_assign{

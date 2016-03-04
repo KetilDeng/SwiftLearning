@@ -10,10 +10,6 @@
 
 #import "UIViewController+Associated.h"
 
-__weak NSString *string_weak_assign = nil;
-__weak NSString *string_weak_retain = nil;
-__weak NSString *string_weak_copy   = nil;
-
 @interface ViewController ()
 
 @end
@@ -26,23 +22,18 @@ __weak NSString *string_weak_copy   = nil;
     self.associatedObject_assign = [NSString stringWithFormat:@"dengketao1"];
     self.associatedObject_retain = [NSString stringWithFormat:@"dengketao2"];
     self.associatedObject_copy   = [NSString stringWithFormat:@"dengketao3"];
-    self.associatedObject_bool = NO;
-
-//    self.associatedObject_integer = 7;
-
-    string_weak_assign = self.associatedObject_assign;
-    string_weak_retain = self.associatedObject_retain;
-    string_weak_copy   = self.associatedObject_copy;
+    self.associatedObject_bool = YES;
+    self.associatedObject_integer = 7;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign); 
+    NSLog(@"self.associatedObject_assign: %@", self.associatedObject_assign);
     NSLog(@"self.associatedObject_retain: %@", self.associatedObject_retain);
     NSLog(@"self.associatedObject_copy:%@", self.associatedObject_copy);
-#warning --- 无效 associatedObject_bool ？？？
     NSLog(@"associatedObject_bool:%d", self.associatedObject_bool);
-//    NSLog(@"associatedObject_integer:%d",self.associatedObject_integer);
+    NSLog(@"associatedObject_integer:%ld",self.associatedObject_integer);
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
