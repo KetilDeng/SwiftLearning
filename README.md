@@ -1,2 +1,2 @@
-# MyLearning
-个人开发过程中对一些新特性的学习，以及一些常用类，小功能的封装等。
+# SwiftLearning
+Swift学习
