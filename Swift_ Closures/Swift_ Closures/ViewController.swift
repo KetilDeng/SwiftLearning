@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var backgroundCompletionHandler: (() -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,19 @@ class ViewController: UIViewController {
         Fuction(1) { () -> () in
             print("hello")
         }
+        Fuction(7) { 
+            
+        }
+        
+        Fuction2(8) { () -> [String] in
+            return ["dengketao"]
+        }
+        
+        Function3(999) { (a, b, c) in
+            print("\(a)\n\(b)\n\(c)")
+        }
+        
+        Function3(888, closure: nil)
     }
     
     func Getlist(arr:[Int], pre:(Int) -> Bool) -> [Int]{
@@ -49,6 +64,19 @@ class ViewController: UIViewController {
     
     func Fuction(s:Int, closure:()->()){
         print(s)
+    }
+    
+    func Fuction2(s:Int, closure:()->[String]){
+        print(s)
+    }
+    
+    func Function3(s:Int, closure:((a:Int, b:String, c:[String]) -> Void)?){
+        if s > 99 {
+            if let closure = closure {
+                closure(a: s, b: "dengketao", c: ["deng", "ke", "tao"])
+
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
