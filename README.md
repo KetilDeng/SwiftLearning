@@ -7,3 +7,4 @@
 - [Welcome to Swift.org](https://swift.org/)
 - [Let's Swift](http://letsswift.com/)
 - [swiftcafe](http://swiftcafe.io/)
+- [SwiftGG](http://swift.gg/)
