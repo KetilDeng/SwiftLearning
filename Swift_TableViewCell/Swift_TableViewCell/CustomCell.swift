@@ -40,6 +40,10 @@ class CustomCell: UITableViewCell {
         iconImageView.image = UIImage(named: model.icon)
         appNameLabel.text = model.name
         decLabel.text = model.dec
+        self.detailTextLabel?.text = model.name
+        
+//        self.textLabel?.text = model.name
+//        self.detailTextLabel?.text = model.name
     }
     
     
