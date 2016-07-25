@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if cell == nil
         {
-            cell = CustomCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellID)
+            cell = CustomCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellID)
             cell!.selectionStyle = .Gray
             cell!.accessoryType = .DisclosureIndicator
         }
